@@ -11,7 +11,6 @@ void setup()
 }
 void draw()
 {	
-	head();
 	stroke(255, (int)(Math.random()*150)+100, (int)(Math.random()*45)+200);
 	while (endX < 400) {
 		endX = startX + (int)(Math.random()*10);
@@ -20,23 +19,30 @@ void draw()
 		startX = endX;
 		startY = endY;
 	}
+
+	head2();
 }
 	
 void mousePressed()
 {
-	startX = (int)(Math.random()*100)+50;
+	startX = (int)(Math.random()*95)+60;
 	endX = 0;
 	startY =(int)(Math.random()*150)+100;
 	endY = 100;
 
 }
 
-void head()
+void head2()
 {
 	pushMatrix();
-	translate(90,100);
-	rotate(PI/3);
+	translate(100,140);
+	rotate(((5*PI)/12)*.7);
+	noStroke();
 	fill(255,20,147);
 	ellipse(0,0,200,250);
+	//eye
+	fill(255,215,0);
+	ellipse(-30,-40,40,20);
+	ellipse(-30,30,40,20);
 	popMatrix();
 }
