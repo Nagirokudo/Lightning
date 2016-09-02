@@ -45,4 +45,5 @@ void head2()
 	ellipse(-30,-40,40,20);
 	ellipse(-30,30,40,20);
 	popMatrix();
+
 }
